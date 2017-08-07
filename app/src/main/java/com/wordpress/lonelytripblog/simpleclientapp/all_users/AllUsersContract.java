@@ -14,8 +14,9 @@ public class AllUsersContract {
         void hideLoadingState();
         void showEmptyView();
         void hideEmptyView();
-        boolean isEmptyViewSet();
+        boolean isEmptyViewShown();
         void setUsers(List<User> users);
+        void openUserById(String userDescription, int userId);
     }
     interface Presenter {
         void loadUsers();

@@ -15,11 +15,12 @@ public class UserAlbumsContract {
         void hideLoadingState();
         void showEmptyView();
         void hideEmptyView();
-        boolean isEmptyViewSet();
+        boolean isEmptyViewShown();
         void setAlbums(List<Album> albums);
+        void openAlbumById(int albumId);
     }
     interface Presenter {
-        void loadAlbums();
+        void loadAlbums(int userId);
         void openAlbum(Album album);
     }
 }

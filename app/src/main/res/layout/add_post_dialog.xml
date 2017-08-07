@@ -15,6 +15,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:inputType="text"
             android:id="@+id/post_title"/>
     </LinearLayout>
 
@@ -32,6 +33,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:id="@+id/post_body"
+            android:inputType="text"
             android:lines="3"
             android:scrollbars="vertical"/>
 

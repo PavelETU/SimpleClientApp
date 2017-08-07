@@ -14,7 +14,7 @@ public interface Repository {
         void onAlbumsLoaded(List<Album> albums);
     }
     interface LoadPostsByUserCallback {
-        void onAlbumsLoaded(List<Post> albums);
+        void onPostsLoaded(List<Post> posts);
     }
     interface LoadPhotosByAlbumCallback {
         void onImagesLoaded(List<Photo> photos);
@@ -31,6 +31,6 @@ public interface Repository {
     void getAlbumsByUser(int userId, LoadAlbumsByUserCallback callback);
     void getPostsByUser(int userId, LoadPostsByUserCallback callback);
     void getPhotosByAlbum(int albumId, LoadPhotosByAlbumCallback callback);
-    void postPost(Post postToBePost, CreatePostCallback callback);
+    void postPost(String title, String body, int userId, CreatePostCallback callback);
     void deletePost(int postId, DeletePostCallback callback);
 }

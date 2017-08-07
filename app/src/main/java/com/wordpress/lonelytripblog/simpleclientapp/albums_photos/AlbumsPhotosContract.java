@@ -15,8 +15,9 @@ public class AlbumsPhotosContract {
         void hideLoadingState();
         void showEmptyView();
         void hideEmptyView();
-        boolean isEmptyViewSet();
+        boolean isEmptyViewShown();
         void setPhotos(List<Photo> photos);
+        void openPhoto(String url);
     }
     interface Presenter {
         void loadPhotos(int albumId);

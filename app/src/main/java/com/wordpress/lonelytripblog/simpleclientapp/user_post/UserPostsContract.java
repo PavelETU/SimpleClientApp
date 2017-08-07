@@ -15,11 +15,16 @@ public class UserPostsContract {
         void hideLoadingState();
         void showEmptyView();
         void hideEmptyView();
-        boolean isEmptyViewSet();
+        boolean isEmptyViewShown();
         void setPosts(List<Post> posts);
+        void succeedToDelete();
+        void failedToDelete();
+        void succeedToPost();
+        void failedToPost();
     }
     interface Presenter {
-        void loadUsers();
-        void createPost(Post lastPostByUser);
+        void loadPosts(int userId);
+        void createPost(Post postToCreate);
+        void deletePost(Post postToDelete);
     }
 }
